@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+.header {
+    display: flex;
+    align-items: flex-end;
+
+}
+.header__image {
+    object-fit: contain;
+}
+.header__title{
+    display: flex;
+    text-align: center;
+    margin: 0;
+    color: white;
+    font-family: "Alex Brush", cursive;
+    font-style: oblique;
+    font-size: 6vw;
+}
+#underline {
+    height: 2px;
+    width: 100%;
+    background-color: white;
+}
+p {
+    color: white;
+}
+#quote {
+    text-align: left;
+    font-size: larger;
+}
+#quote_author {
+    text-align: right;
+    padding-left: 60vb;
+    margin: 0;
+}
+.birthdateInput{
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+#birthdate {
+    padding: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.week_grid {
+    display: grid;
+    grid-template-columns: repeat(52, 10px);
+    gap: 5px;
+    margin-top: 20px;
+    position: relative;
+}
+.week_box {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: 1px solid black;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+.week_box:hover {
+    transform: scale(2.5);
+    cursor: pointer;
+    z-index: 1;
+}
+.milestone {
+    grid-column: 1/-1;
+    text-align: center;
+    margin: 10px 0;
+    color: #fff;
+}
+.tooltip {
+    display: none;
+      position: absolute;
+      background-color: #333;
+      color: #fff;
+      padding: 5px;
+      border-radius: 3px;
+      font-size: 12px;
+      white-space: nowrap;
+      top: -30px; /* Position above the box */
+      left: 50%;
+      transform: translateX(-50%);
+}
+.week-box:hover .tooltip {
+    display: block;
+}
+
+.past_week{
+    background-color: gray;
+}
